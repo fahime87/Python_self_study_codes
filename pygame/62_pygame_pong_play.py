@@ -11,6 +11,7 @@ def predict(x,y,sx,sy):
     pass
 pg.init()
 screen=pg.display.set_mode((640,480))
+pygame.display.set_caption("pong pong")
 bar1x,bar1y=5,240
 bar2x,bar2y=625,290
 circlex,circley=30,30
