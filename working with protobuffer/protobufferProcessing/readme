@@ -1,0 +1,9 @@
+1-in this project we make a random .bin file
+base on college.proto --->we can make the random file by running randomData.py
+
+2-now there is a .bin file we assume that "we recieved this encrypted file"
+3-next step is reading file data
+-parse data to understandable object for our program  (protoc object)
+-save them in db base on models we defined in our app
+--we saved about 5000 student data and 100 course data and we consider execution time
+also we run the test file to convince there was no problem in saving data

@@ -1,0 +1,82 @@
+syntax = "proto2";
+
+package tutorial_1;
+
+message Student {
+  optional string Name = 1;
+  required int32 National_id = 2;
+
+  enum PhoneType {
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+  }
+
+  message PhoneNumber {
+    optional string number = 1;
+    optional PhoneType type = 2 [default = HOME];
+  }
+
+  repeated PhoneNumber phones = 3;
+
+  enum Mount_list{
+    January=1;
+    February=2;
+    March=3;
+    April=4;
+    May=5;
+    June=6;
+    July=7;
+    August=8;
+    September=9;
+    October=10;
+    November=11;
+    December=12;
+  }
+  message Day{
+    optional int32 day=1;
+    optional Mount_list mount=2;
+    optional int32 year=3;
+
+  }
+  optional Day BirthDay=4;
+
+
+  enum  Sex{
+    male=1;
+    femail=2;
+  }
+  optional Sex Gender=5;
+
+
+  message Location{
+     optional string country=1 [default="iran"];
+     optional string city=2 [default="tehran"];
+     optional string street=3;
+  }
+  repeated Location Address=6;
+
+  repeated CollegCourse Courses=7;
+
+
+}
+
+message CollegCourse{
+  required int32 id=1;
+  optional string Name=2;
+
+  enum CourseUnit{
+    one=1;
+    two=2;
+    three=3;
+
+  }
+   optional CourseUnit Unit=3[default=one];
+
+}
+
+message college{
+  repeated CollegCourse courseList=13;
+  repeated Student studentList=12;
+
+}
